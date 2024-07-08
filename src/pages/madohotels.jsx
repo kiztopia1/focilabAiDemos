@@ -1,0 +1,149 @@
+import React, { useEffect } from "react";
+import "./madohotels.css";
+export default function Madohotels() {
+  useEffect(() => {
+    // Function to remove the specified element
+    const removeElement = () => {
+      const element = document.querySelector(
+        "div:nth-child(3) > div.vfrc-widget--chat.c-fikloo > div > article > footer > aside > a"
+      );
+      if (element) {
+        element.remove();
+      }
+    };
+
+    // Call the function to remove the element
+    removeElement();
+  }, []);
+  return (
+    <div className="mado">
+      <div className="hero">
+        <img src="/mado/madoHero.webp" alt="mado addis" />
+        {/* <img className="white" src="/mado/white.svg" alt="" /> */}
+      </div>
+      <div className="reservation">
+        <div>
+          <p>Your Dates</p>
+          <input type="date" name="date" id="date" />
+        </div>
+        <div>
+          <p>Adults</p>
+          <input type="number" value="1" name="date" id="date" />
+        </div>
+        <div>
+          <p>Children</p>
+          <input type="number" value="0" name="date" id="date" />
+        </div>
+        <div>
+          <p>Promo Code</p>
+          <input type="text" name="date" id="date" />
+        </div>
+        <div>
+          <button>CHECK AVAILABILITY</button>
+        </div>
+      </div>
+      <div className="foci">
+        <h1>This is not the official site of Mado Hotel!</h1>
+        <p>
+          We created this demo to showcase our AI Agent integration for
+          enhancing customer service on hotel websites. This is not the official
+          website of mado hotel, but a demonstration of how our agent can assist
+          your guests with inquiries and bookings.
+        </p>
+      </div>
+      <div className="fe">
+        <div>
+          <h3>Introduction</h3>
+          <p className="intro">
+            At Foci Lab, we understand the importance of providing exceptional
+            customer service. That's why we've developed an AI agents
+            specifically designed for hotels, helping you to offer a seamless
+            and personalized experience for your guests.
+          </p>
+          <h3>Benefits:</h3>
+          <ul>
+            <li>
+              <p className="header">Increased Booking Rates</p>
+              <p>Achieve 90% faster response times with 24/7 availability.</p>
+            </li>
+            <li>
+              <p className="header">Cost Savings</p>
+              <p>
+                Reduce operational costs by handling customer interactions
+                automatically.
+              </p>
+            </li>
+            <li>
+              <p className="header">Data-Driven Personalization</p>
+              <p>Collect and analyze guest data to offer tailored services.</p>
+            </li>
+            <li>
+              <p className="header">Increased Booking Rates:</p>
+              <p>
+                Boost booking rates by up to 20% with instant, personalized
+                responses.
+              </p>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3>Features</h3>
+          <ul>
+            <li>
+              <p className="header">24/7 Availability:</p>
+              <p>
+                Our chatbot is available round the clock, ensuring that your
+                guests can get the help they need anytime, anywhere.
+              </p>
+            </li>
+            <li>
+              <p className="header">Instant Responses:</p>
+              <p>
+                No more waiting for email replies or call-backs. Our AI Agent
+                provides instant answers to your guests' questions.
+              </p>
+            </li>
+            <li>
+              <p className="header">Booking Assistance:</p>
+              <p>
+                From room reservations to special requests, our chatbot guides
+                your guests through the booking process, making it quick and
+                easy.
+              </p>
+            </li>
+            <li>
+              <p className="header">Personalized Recommendations:</p>
+              <p>
+                By analyzing guest preferences, our chatbot can suggest
+                activities, dining options, and local attractions tailored to
+                their interests.
+              </p>
+            </li>
+            <li>
+              <p className="header">Seamless Integration:</p>
+              <p>
+                Our chatbot integrates effortlessly with your existing website
+                and booking systems, providing a smooth experience for both you
+                and your guests.
+              </p>
+            </li>
+          </ul>
+        </div>
+        {(function (d, t) {
+          var v = d.createElement(t),
+            s = d.getElementsByTagName(t)[0];
+          v.onload = function () {
+            window.voiceflow.chat.load({
+              verify: { projectID: "668b8d5b9287ced928a45fc6" },
+              url: "https://general-runtime.voiceflow.com",
+              versionID: "production",
+            });
+          };
+          v.src = "https://cdn.voiceflow.com/widget/bundle.mjs";
+          v.type = "text/javascript";
+          s.parentNode.insertBefore(v, s);
+        })(document, "script")}
+      </div>
+    </div>
+  );
+}
