@@ -94,3 +94,66 @@
 .mado .header {
   font-weight: bold;
 }
+.mado .offer h2 {
+  text-align: center;
+}
+.mado .offer p {
+  max-width: 600px;
+  margin: 30px auto;
+}
+.mado .offer {
+  display: flex;
+  max-width: 900px;
+  margin: 10px auto;
+}
+
+.mado .offer a {
+  color: black;
+
+  font-weight: bold;
+  font-size: 1.4rem;
+  padding: 20px 30px;
+  text-decoration: none;
+  margin: 5px;
+  border-radius: 5px;
+}
+.mado .offer .website {
+  color: white;
+  background-color: #4c8577;
+  font-weight: bold;
+  font-size: 1.4rem;
+  padding: 20px 30px;
+  text-decoration: none;
+  margin: 5px;
+  border-radius: 5px;
+}
+.mado .offer .links {
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 768px) {
+  .mado .reservation {
+    display: none;
+  }
+
+  .mado .fe {
+    padding: 10px;
+    flex-wrap: wrap;
+  }
+  .mado .fe div {
+    width: 100%;
+  }
+  .foci p {
+    padding: 10px 40px;
+  }
+  .mado .fe div {
+    padding: 5px;
+  }
+  .mado .offer {
+    flex-wrap: wrap;
+  }
+  .mado .offer div {
+    width: 90%;
+    margin: auto;
+  }
+}

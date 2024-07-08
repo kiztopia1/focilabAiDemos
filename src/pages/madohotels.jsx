@@ -129,6 +129,7 @@ export default function Madohotels() {
             </li>
           </ul>
         </div>
+
         {(function (d, t) {
           var v = d.createElement(t),
             s = d.getElementsByTagName(t)[0];
@@ -143,6 +144,28 @@ export default function Madohotels() {
           v.type = "text/javascript";
           s.parentNode.insertBefore(v, s);
         })(document, "script")}
+      </div>
+      <div className="offer">
+        <div>
+          <h2>What Next?</h2>
+          <p>
+            If you believe our AI Agent can enhance your hotel's website visitor
+            experience and would like to discuss it further, please give us a
+            call. We can arrange a meeting at your office or schedule a quick
+            video call to discuss the details.
+          </p>
+        </div>
+        <div className="links">
+          <a href="https://focilab.com/" className="website">
+            Visite Our Website
+          </a>
+          <a href="mailto:kirubel@focilab.com" className="email">
+            kirubel@focilab.com
+          </a>
+          <a href="tel:+251960551172" className="phone">
+            +251960551172
+          </a>
+        </div>
       </div>
     </div>
   );
