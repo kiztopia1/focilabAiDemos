@@ -5,6 +5,7 @@ import { Route, Routes } from "react-router-dom";
 
 import Home from "./pages/Home";
 import Mado from "./pages/madohotels";
+import Interluxuryhotel from "./pages/interluxuryhotel";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/mado" element={<Mado />} />
+        <Route path="/interluxuryhotel" element={<Interluxuryhotel />} />
       </Routes>
     </div>
   );
