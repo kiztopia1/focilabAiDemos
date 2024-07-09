@@ -80,3 +80,9 @@
 .harmony .foci h1 {
   text-align: center;
 }
+
+@media (max-width: 768px) {
+  .harmony nav ul {
+    display: none;
+  }
+}
