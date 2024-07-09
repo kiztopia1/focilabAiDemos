@@ -7,6 +7,7 @@ import Home from "./pages/Home";
 import Mado from "./pages/madohotels";
 import Interluxuryhotel from "./pages/interluxuryhotel";
 import Harmony from "./pages/Harmony";
+import Grand from "./pages/Grand";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/mado" element={<Mado />} />
         <Route path="/interluxuryhotel" element={<Interluxuryhotel />} />
         <Route path="/harmony-hotel" element={<Harmony />} />
+        <Route path="/grandpalaceaddis" element={<Grand />} />
       </Routes>
     </div>
   );

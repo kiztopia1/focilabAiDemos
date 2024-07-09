@@ -1,0 +1,168 @@
+@import url("https://fonts.cdnfonts.com/css/open-sans");
+@import url("https://fonts.cdnfonts.com/css/cormorant-2");
+/* nav */
+.grand {
+  font-family: "Open Sans", sans-serif;
+}
+.grand nav {
+  background-color: white;
+
+  width: 100%;
+  color: #434343;
+}
+.grand nav .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+
+  padding: 7px 100px 0 100px;
+}
+.grand nav .top img {
+  height: 20px;
+}
+.grand nav .top div {
+  display: flex;
+  align-items: center;
+}
+.grand nav .top .icon {
+  background-color: #b99470;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 5px;
+}
+.grand nav .top button {
+  background-color: #b99470;
+  color: white;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  margin: 0 9px;
+  border: none;
+  padding: 10px;
+}
+.grand nav .top button img {
+  margin-right: 8px;
+}
+.grand nav .top .icon img {
+  height: 17px;
+}
+.grand nav .line {
+  width: 100%;
+  background-color: rgb(187, 187, 187);
+  height: 1px;
+  margin: 0;
+  display: inline-block;
+  padding: 0;
+  position: relative;
+  top: -5px;
+}
+.grand nav img {
+  margin: auto;
+  height: 50px;
+}
+
+.grand nav .bottom {
+  display: flex;
+  padding: 30px 0px 30px 100px;
+}
+.grand nav .bottom img {
+  width: 250px;
+  height: fit-content;
+}
+
+.grand nav ul {
+  width: 80%;
+  list-style: none;
+  color: #434343;
+  align-items: center;
+  display: flex;
+  justify-content: space-evenly;
+}
+.grand nav ul li {
+  margin: 0;
+}
+
+.grand .hero {
+  /* Ensure the container fills the entire viewport */
+  height: 87vh;
+  width: 100vw;
+  overflow: hidden; /* Hide any overflow content */
+}
+
+.grand .hero img {
+  width: 100vw; /* Set image width to 100% of the viewport width */
+  height: 87vh; /* Set image height to 100% of the viewport height */
+  object-fit: cover; /* Scale the image to cover the container */
+  object-position: center; /* Center the image */
+}
+.grand .hero .info {
+  position: absolute;
+  z-index: 3;
+  top: 60%;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-family: "Cormorant", sans-serif;
+}
+.grand .hero .info p {
+  padding: 0 170px;
+}
+.grand .hero .info button {
+  display: flex;
+  background-color: #b99470;
+
+  border: none;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin: auto;
+  color: white;
+}
+.grand .hero .info img {
+  width: 20px;
+  height: fit-content;
+}
+.grand .reservation {
+  display: flex;
+  width: 80%;
+  margin: 15px auto;
+  box-shadow: none;
+  border-radius: 4px;
+  padding: 10px;
+  background-color: #1b1b1b;
+  color: white;
+}
+
+.grand .reservation div {
+  flex-grow: 1;
+}
+.grand .reservation input {
+  padding: 12px;
+  border: none;
+}
+.grand .reservation p {
+  margin: 0;
+  font-size: 1.1rem;
+}
+.grand .reservation button {
+  background-color: #b99470;
+  color: rgb(255, 255, 255);
+  padding: 10px 15px;
+  border: none;
+  height: 90%;
+  width: 70%;
+}
+.grand .foci h1 {
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .grand nav ul {
+    display: none;
+  }
+}

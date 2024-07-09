@@ -8,6 +8,7 @@ body {
   color: rgb(26, 26, 26);
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden !important;
+  box-sizing: border-box;
 }
 @import url("https://fonts.cdnfonts.com/css/kanit");
 @import url("https://fonts.cdnfonts.com/css/kalam");
