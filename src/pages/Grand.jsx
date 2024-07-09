@@ -39,7 +39,7 @@ export default function Grand() {
         </div>
       </nav>
       <div className="hero">
-        <img src="/Grand/hero.jpg" alt="mado addis" />
+        <img src="/grand/hero.jpg" alt="mado addis" />
         <div className="info">
           <h1>Bask In Regal Experience</h1>
           <p>
