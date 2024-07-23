@@ -8,6 +8,7 @@ import Mado from "./pages/madohotels";
 import Interluxuryhotel from "./pages/interluxuryhotel";
 import Harmony from "./pages/Harmony";
 import Grand from "./pages/Grand";
+import Texas from "./pages/Texas";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/interluxuryhotel" element={<Interluxuryhotel />} />
         <Route path="/harmony-hotel" element={<Harmony />} />
         <Route path="/grandpalaceaddis" element={<Grand />} />
+        <Route path="/texasstrongfitness" element={<Texas />} />
       </Routes>
     </div>
   );

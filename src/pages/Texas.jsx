@@ -1,35 +1,41 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/Foci.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta name="description" content="FociLab | Flow State on Command" />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/Foic.png" />
-    <link href="https://fonts.cdnfonts.com/css/poppins" rel="stylesheet" />
+import React, { useState, useEffect } from "react";
+import "./Texas.css";
 
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+export default function Texas() {
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768); // Default to mobile if width is less than 768px
+  const [loading, setLoading] = useState(true); // State to track loading status
 
-    <title>FociLab</title>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FQPJ7QVJLK"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  // Function to update screen width state
+  const handleResize = () => {
+    setIsMobile(window.innerWidth < 768);
+  };
 
-  gtag('config', 'G-FQPJ7QVJLK');
-</script>
-</script>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-  </body>
-  
-     <script type="text/javascript">
-      (function (d, t) {
+  // Add event listener on mount
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+
+    // Clean up event listener on unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  // Function to handle image load event
+  const handleImageLoad = () => {
+    setLoading(false); // Set loading to false once the image is loaded
+  };
+
+  return (
+    <div className="texas">
+      {loading && <h1>Loading...</h1>}{" "}
+      {/* Show loading text until the image loads */}
+      <img
+        src={isMobile ? "texas/texas-mobile.png" : "texas/texas.png"}
+        alt={isMobile ? "Texas Mobile" : "Texas"}
+        onLoad={handleImageLoad} // Set loading to false when image is loaded
+        style={{ display: loading ? "none" : "block" }} // Hide image while loading
+      />
+      {/* {(function (d, t) {
         var v = d.createElement(t),
           s = d.getElementsByTagName(t)[0];
 
@@ -52,7 +58,9 @@
                 clearInterval(checkLoadingComplete);
                 console.log("Chatbot loading is complete");
 
-                fetch("https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css")
+                fetch(
+                  "https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+                )
                   .then((response) => response.text())
                   .then((css) => {
                     // Create a style element and append the fetched CSS
@@ -87,6 +95,7 @@
         v.src = "https://cdn.voiceflow.com/widget/bundle.mjs";
         v.type = "text/javascript";
         s.parentNode.insertBefore(v, s);
-      })(document, "script"); </script>
-    
-</html>
+      })(document, "script")} */}
+    </div>
+  );
+}
