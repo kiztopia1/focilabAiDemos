@@ -27,7 +27,15 @@ export default function Texas() {
 
   return (
     <div className="texas">
-      {loading && <h1>Loading...</h1>}{" "}
+      {loading && (
+        <>
+          <h1>Loading, Please Wait...</h1>
+          <p>
+            This site is created to showcase our AI agents. Please be patient
+            while we load the website.
+          </p>
+        </>
+      )}{" "}
       {/* Show loading text until the image loads */}
       <img
         src={isMobile ? "texas/texas-mobile.png" : "texas/texas.png"}
