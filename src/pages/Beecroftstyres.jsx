@@ -81,6 +81,7 @@ export default function Beecroftstyres() {
                 console.log("button ****", buttonImg);
                 buttonImg.style.width = "100%!important";
                 buttonImg.style.height = "100%!important";
+                chatbotButton.click();
                 fetch(
                   "https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
                 )
