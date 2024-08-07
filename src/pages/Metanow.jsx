@@ -37,8 +37,8 @@ export default function Metanow() {
       )}{" "}
       {/* Show loading text until the image loads */}
       <img
-        src={isMobile ? "mobile.png" : "main.png"}
-        alt={isMobile ? "Texas Mobile" : "Texas"}
+        src={isMobile ? "metanow/mobile.png" : "metanow/main.png"}
+        alt={isMobile ? "Metanow" : "Metanow"}
         onLoad={handleImageLoad} // Set loading to false when image is loaded
         style={{ display: loading ? "none" : "block" }} // Hide image while loading
       />
@@ -108,11 +108,11 @@ export default function Metanow() {
                 pTag.innerHTML = "👋 Hey, How can i help you";
                 pTag.style.color = "auto";
                 pTag.style.fontFamily = "Arial, sans-serif";
-                pTag.style.fontSize = "1rem";
+                pTag.style.fontSize = ".9rem";
 
                 // chatbotButton.style.animation = "bounce 3s infinite";
-                chatbotButton.style.scale = "1";
-                chatbotButton.style.background = "#6D6D6D";
+                chatbotButton.style.scale = "1.2";
+                chatbotButton.style.background = "white";
               }
             }
           }, 100);
