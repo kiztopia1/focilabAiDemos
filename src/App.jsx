@@ -10,6 +10,7 @@ import Harmony from "./pages/Harmony";
 import Grand from "./pages/Grand";
 import Texas from "./pages/Texas";
 import Beecroftstyres from "./pages/Beecroftstyres";
+import Metanow from "./pages/Metanow";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/" element={<Home />} />
 
         <Route path="/Beecroftstyres" element={<Beecroftstyres />} />
+        <Route path="/metanow" element={<Metanow />} />
         <Route path="/mado" element={<Mado />} />
         <Route path="/interluxuryhotel" element={<Interluxuryhotel />} />
         <Route path="/harmony-hotel" element={<Harmony />} />
