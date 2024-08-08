@@ -8,9 +8,23 @@ export default function Metanow() {
   const handleResize = () => {
     setIsMobile(window.innerWidth < 768);
   };
+  // Function to delete all localStorage items starting with a specific prefix
+  function deleteLocalStorageItemsWithPrefix(prefix) {
+    // Iterate over all localStorage keys
+    for (let i = 0; i < localStorage.length; i++) {
+      const key = localStorage.key(i);
 
+      // Check if the key starts with the specified prefix
+      if (key && key.startsWith(prefix)) {
+        localStorage.removeItem(key);
+        i--; // Decrement index to account for the removal
+      }
+    }
+  }
   // Add event listener on mount
   useEffect(() => {
+    // Call the function with the prefix 'voiceflow-session'
+    deleteLocalStorageItemsWithPrefix("voiceflow-session");
     window.addEventListener("resize", handleResize);
 
     // Clean up event listener on unmount
