@@ -82,16 +82,6 @@ export default function Metanow() {
                 buttonImg.style.width = "100%!important";
                 buttonImg.style.height = "100%!important";
                 // chatbotButton.click();
-                fetch(
-                  "https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-                )
-                  .then((response) => response.text())
-                  .then((css) => {
-                    // Create a style element and append the fetched CSS
-                    var style = document.createElement("style");
-                    style.textContent = css;
-                    chatbotButtonHost.shadowRoot.appendChild(style);
-                  });
 
                 let pTag = document.createElement("p");
 
@@ -105,7 +95,7 @@ export default function Metanow() {
                 pTag.style.right = "68px";
                 pTag.style.fontFamily = "Arial, sans-serif";
                 pTag.style.fontWeight = "bold";
-                pTag.innerHTML = "👋 Hey, How can i help you";
+                pTag.innerHTML = "👋 Hey, How can I help you";
                 pTag.style.color = "auto";
                 pTag.style.fontFamily = "Arial, sans-serif";
                 pTag.style.fontSize = ".9rem";
