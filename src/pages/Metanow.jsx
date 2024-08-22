@@ -75,7 +75,7 @@ export default function Metanow() {
 
         v.onload = function () {
           window.voiceflow.chat.load({
-            verify: { projectID: "66b0db0ac4ae7f489b23ce14" },
+            verify: { projectID: "66c1e7ddf9dfe876a245a468" },
             url: "https://general-runtime.voiceflow.com",
             versionID: "production",
           });
